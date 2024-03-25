@@ -1,7 +1,6 @@
 # Личный проект «Типотека» [![Build status][travis-image]][travis-url]
 
 * Студент: [Юлия Ситникова](https://up.htmlacademy.ru/nodejs/3/user/175289).
-* Наставник: `Неизвестно`.
 
 ---
 
