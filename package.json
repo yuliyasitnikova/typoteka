@@ -5,6 +5,7 @@
   "private": true,
   "main": "./src/service/service.js",
   "scripts": {
+    "start": "node ./src/service/service.js",
     "eslint": "eslint --ext .js src/",
     "test": "npm run eslint"
   },
