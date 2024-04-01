@@ -9,6 +9,9 @@
     "eslint": "eslint --ext .js src/",
     "test": "npm run eslint"
   },
+  "dependencies": {
+    "chalk": "4.1.2"
+  },
   "devDependencies": {
     "eslint": "8.57.0",
     "eslint-config-htmlacademy": "0.6.0"
