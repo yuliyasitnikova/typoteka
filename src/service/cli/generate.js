@@ -1,6 +1,8 @@
 'use strict';
 
 const fs = require(`fs`);
+const chalk = require(`chalk`);
+
 const {ExitCode} = require(`../../common/constants`);
 const {
   getRandomInt,
@@ -91,7 +93,7 @@ module.exports = {
     const countPost = Number.parseInt(count, 10) || DEFAULT_COUNT;
 
     if (countPost > MAX_COUNT) {
-      console.error(`Не больше 1000 публикаций`);
+      console.error(chalk.red(`Не больше 1000 публикаций`));
       process.exit(ExitCode.error);
     }
 
@@ -99,10 +101,10 @@ module.exports = {
 
     fs.writeFile(FILE_NAME, content, (err) => {
       if (err) {
-        return console.error(`Не удалось записать данные в файл`);
+        return console.error(chalk.red(`Не удалось записать данные в файл`));
       }
 
-      return console.info(`Файл успешно создан`);
+      return console.info(chalk.green(`Файл успешно создан`));
     });
   },
 };
