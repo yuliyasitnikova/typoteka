@@ -5,7 +5,7 @@
   "private": true,
   "main": "./src/service/service.js",
   "scripts": {
-    "start": "node ./src/service/service.js",
+    "start": "nodemon ./src/service/service.js --server 3000",
     "eslint": "eslint --ext .js src/",
     "test": "npm run eslint"
   },
@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "eslint": "8.57.0",
-    "eslint-config-htmlacademy": "0.6.0"
+    "eslint-config-htmlacademy": "0.6.0",
+    "nodemon": "3.1.0"
   },
   "author": "Юлия Ситникова",
   "license": "ISC"

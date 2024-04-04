@@ -1,19 +1,16 @@
 'use strict';
 
-const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
+const fs = require(`fs`).promises;
 
-const {ExitCode} = require(`../../common/constants`);
+const {MOCKS_FILE_NAME, ExitCode} = require(`../../common/constants`);
 const {
   getRandomInt,
   shuffle,
 } = require(`../../common/utils`);
 
 const DEFAULT_COUNT = 1;
-
 const MAX_COUNT = 1000;
-
-const FILE_NAME = `mocks.json`;
 
 const FILE_TITLE_PATH = `./src/data/titles.txt`;
 const FILE_SENTENCES_PATH = `./src/data/sentences.txt`;
@@ -70,7 +67,7 @@ module.exports = {
     const content = JSON.stringify(generatePosts(countPost, titles, sentences, categories));
 
     try {
-      await fs.writeFile(FILE_NAME, content);
+      await fs.writeFile(MOCKS_FILE_NAME, content);
       console.log(chalk.green(`Файл успешно создан`));
     } catch (err) {
       console.error(chalk.red(`Не удалось записать данные в файл`));
