@@ -2,6 +2,8 @@
 
 module.exports.DEFAULT_COMMAND = `--help`;
 
+module.exports.MOCKS_FILE_NAME = `mocks.json`;
+
 module.exports.USER_ARGV_INDEX = 2;
 
 module.exports.ExitCode = {
